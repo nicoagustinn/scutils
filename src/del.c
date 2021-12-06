@@ -2,7 +2,7 @@
  
 int main(int argc, char *argv[]) {
 	if (argc>=3){
-		printf("Rip");
+		printf("Too many arguments!");
 		return 1;}
     if (remove(argv[1]) == 0) {
         printf("The file %s was deleted successfully.",argv[1]);
