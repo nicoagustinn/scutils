@@ -1,28 +1,33 @@
 #include<stdio.h>
   
-int ren(char* argv[2]) {
-    int result = rename("welcome.txt", "readme.txt");
-    if (result == 0) {
-        printf("The file is renamed successfully.");
-    } else {
-        printf("The file could not be renamed.");
-    }
+int ren(char oldName[128],char newName[128]){
+    // Path to old and new files
+    // Input old and new file name
+    printf("Enter old file path: ");
+    scanf("%s", oldName);
+
+    printf("Enter new file path: ");
+    scanf("%s", newName);
+    // rename old file with new name
+    if (rename(oldName, newName) == 0)
+        printf("File renamed successfully.\n");
+    else
+    printf("Unable to rename files!\nWrong name?\nNot enough permissions?\n");
+
     return 0;
 }
-
-int main(int argc,char* argv[])
-{
+int main(int argc,char* argv[]){
     int counter;
-    printf("Program Name Is: %s",argv[0]);
+    printf("%s",argv[0]);
     if(argc==1)
-        printf("\nNo Extra Command Line Argument Passed Other Than Program Name");
-    if(argc>=2)
-    {
+        printf("\nUsage: (usage goes here)");
+    if(argc==2){
         printf("\nNumber Of Arguments Passed: %d",argc);
         printf("\n----Following Are The Command Line Arguments Passed----");
         for(counter=0;counter<argc;counter++)
             printf("\nargv[%d]: %s",counter,argv[counter]);
-	    ren(char* argv[2]);
     }
+    if (argc>=3)
+    	return 1;
     return 0;
 }
