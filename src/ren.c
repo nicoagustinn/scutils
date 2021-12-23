@@ -10,7 +10,7 @@ int ren(char* oldName,char* newName){
 
     return 0;
 }
-int main(int argc,char* argv[]){
+int main(int argc,char *argv[]){
     //int counter;
     printf("%s",argv[0]);
 
