@@ -5,9 +5,7 @@ int main(int argc, char *argv[]) {
 		printf("Too many arguments!");
 		return 1;}
     if (remove(argv[1]) == 0) {
-        printf("The file %s was deleted successfully.",argv[1]);
-    } else {
-        printf("The file was not deleted.");
-    }
+        //printf("The file %s was deleted successfully.",argv[1]);
+    } else {printf("The file was not deleted.");}
     return 0;
 }
