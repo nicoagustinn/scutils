@@ -1,4 +1,3 @@
-//Originally from OpenBSD
 #include <err.h>
 #include <stdio.h>
 #include <stdlib.h>
