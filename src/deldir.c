@@ -47,6 +47,6 @@ int rm_path(char *path) {
 }
 
 static void usage(void) {
-	puts("Usage: deldir directory");
+	puts("Usage: deldir [-p] directory");
 	exit(1);
 }
