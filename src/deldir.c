@@ -8,10 +8,7 @@ int rm_path(char *);
 static void usage(void);
 
 int main(int argc, char *argv[]) {
-	int ch, errors;
-	int pflag;
-
-	pflag = 0;
+	int ch, errors; int pflag; pflag = 0;
 	while ((ch = getopt(argc, argv, "p")) != -1)
 		switch(ch) {
 		case 'p':
@@ -21,8 +18,7 @@ int main(int argc, char *argv[]) {
 			usage();
 		}
 
-	argc -= optind;
-	argv += optind;
+	argc -= optind; argv += optind;
 
 	if (argc == 0)
 		usage();
